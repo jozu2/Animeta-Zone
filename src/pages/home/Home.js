@@ -7,8 +7,8 @@ function Home() {
   return (
     <div style={{ maxWidth: "1920px", margin: "0 auto" }}>
       <Navigation />
-      <MainBanner />
       <SearchBar />
+      <MainBanner />
     </div>
   );
 }

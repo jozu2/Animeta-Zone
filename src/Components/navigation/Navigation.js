@@ -6,7 +6,7 @@ function Navigation() {
   return (
     <div
       className="main-box"
-      style={{ backgroundColor: "#101010", zIndex: 4000 }}
+      style={{ backgroundColor: "black", zIndex: 4000 }}
     >
       <div className="navigation-container">
         <div className="logo-container">
