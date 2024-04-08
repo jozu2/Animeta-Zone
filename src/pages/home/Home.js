@@ -2,6 +2,7 @@ import React from "react";
 import MainBanner from "./MainBanner";
 import Navigation from "../../Components/navigation/Navigation";
 import SearchBar from "./SearchBar";
+import Mostpopular from "./Mostpopular";
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <Navigation />
       <SearchBar />
       <MainBanner />
+      <Mostpopular />
     </div>
   );
 }

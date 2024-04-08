@@ -5,9 +5,7 @@ function Home() {
   const { popularAnime, isSearch } = useGlobalContext();
   const conditionalRender = () => {
     if (!isSearch) {
-      return popularAnime.map((anime) => {
-        console.log("xd", anime);
-      });
+      return popularAnime.map((anime) => {});
     }
   };
   return (

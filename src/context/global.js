@@ -9,7 +9,7 @@ const SEARCH = "SEARCH";
 const GET_POPULAR_ANIME = "GET_POPULAR_ANIME";
 const GET_AIRING_ANIME = "GET_AIRING_ANIME";
 const GET_UPCOMING_ANIME = "GET_UPCOMING_ANIME";
-
+const GET_THIS_SEASON_ANIME = "GET_THIS_SEASON_ANIME";
 //reducer
 const reducer = (state, action) => {
   switch (action.type) {
@@ -17,6 +17,8 @@ const reducer = (state, action) => {
       return { ...state, loading: true };
     case GET_POPULAR_ANIME:
       return { ...state, popularAnime: action.payload, loading: false };
+    case GET_THIS_SEASON_ANIME:
+      return { ...state, thisSeason: action.payload, loading: false };
     default:
       return state;
   }
@@ -24,6 +26,7 @@ const reducer = (state, action) => {
 
 export const GlobalContextProvider = ({ children }) => {
   const initialState = {
+    thisSeason: [],
     popularAnime: [],
     upcomingAnime: [],
     airingAnime: [],
@@ -37,13 +40,34 @@ export const GlobalContextProvider = ({ children }) => {
 
   const getPopularAnime = async () => {
     dispatch({ type: LOADING });
-    const response = await fetch(`${baseUrl}/seasons/now`);
+    const response = await fetch(`${baseUrl}/top/anime?filter=bypopularity`);
     const data = await response.json();
     dispatch({ type: GET_POPULAR_ANIME, payload: data.data });
     await new Promise((resolve) => setTimeout(resolve, 2000));
   };
+
+  const getThisSeasonAnime = async () => {
+    dispatch({ type: LOADING });
+    const response = await fetch(`${baseUrl}/seasons/now`);
+    const data = await response.json();
+    dispatch({ type: GET_THIS_SEASON_ANIME, payload: data.data });
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+  };
+
   useEffect(() => {
-    getPopularAnime();
+    const fetchData = async () => {
+      try {
+        dispatch({ type: LOADING });
+        await getPopularAnime();
+        await getThisSeasonAnime();
+      } catch (error) {
+        // Handle the error, e.g., dispatch an error action
+      } finally {
+        // Dispatch a LOADING_COMPLETE action or update the loading state as needed
+      }
+    };
+
+    fetchData();
   }, []);
   return (
     <GlobalContext.Provider

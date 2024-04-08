@@ -24,7 +24,7 @@ function SearchBar() {
           </div>
         </div>
       </div>
-      <div className="season-title">This Season 2024</div>
+      <div className="season-title">Top Airing Anime</div>
       <div className="season-line"></div>
     </>
   );
