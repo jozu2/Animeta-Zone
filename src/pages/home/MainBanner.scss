@@ -174,6 +174,7 @@
         justify-content: center;
         width: 100%;
         margin-top: 2em;
+
         background-color: transparent;
         .view-trailer {
           display: flex;
@@ -191,6 +192,18 @@
           cursor: pointer;
         }
       }
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .btnShowMore {
+      display: none; /* Hide the button for screen widths below 1200px */
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .minWidth1200 {
+      /* Add any specific styles you want to apply when the width is 1200px or more */
     }
   }
 }
@@ -304,7 +317,7 @@
 
   .swiper-one {
     z-index: 500;
-    width: 700px;
+    width: 650px;
     user-select: none;
     max-height: 70%;
     margin-left: 20px;
@@ -354,7 +367,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 3em;
+    padding: 0 0em;
     align-items: center;
 
     .section-1 {

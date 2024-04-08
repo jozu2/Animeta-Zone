@@ -1,4 +1,4 @@
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 200px) {
   .season-title {
     margin-top: 3em;
     color: #fff;
@@ -9,7 +9,7 @@
   }
   .season-line {
     width: 80px;
-    height: 8px;
+    height: 4px;
     background-color: #f0c244;
     margin-left: 1em;
   }
@@ -65,7 +65,6 @@
         flex-direction: column;
         font-family: "Inter", sans-serif;
         text-align: center;
-        padding: 0 2em;
         font-size: 1.06em;
         .title-1 {
           font-size: 33px;
@@ -113,13 +112,15 @@
 
 @media screen and (min-width: 1200px) {
   .season-title {
-    font-size: 3.5em;
+    font-size: 2.8em;
     font-weight: 900;
     margin-left: 2em;
   }
   .season-line {
     width: 300px;
-    height: 8px;
+    margin-bottom: 50px;
+
+    height: 4px;
     background-color: #f0c244;
     margin-left: 5em;
   }
