@@ -1,18 +1,50 @@
 @media screen and (min-width: 200px) {
+  .button-nav {
+    width: 84%;
+    margin: 30px auto 0 auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    .btn-tab-most {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      .label-tab {
+        padding-top: 10px;
+        font-size: 1.1em;
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        margin-bottom: 15px;
+      }
+      .line-tab-1,
+      .line-tab-2 {
+        width: 100%;
+        height: 2px;
+        margin-top: 2px;
+        background-color: #f0c244;
+        border-radius: 30px;
+      }
+    }
+  }
+
   .most-popular-title {
     color: #fff;
     font-size: 1.9em;
     font-family: "Inter", sans-serif;
     font-weight: 700;
     margin-left: 1em;
-    margin-top: 1em;
+    margin-top: 1.5em;
+    text-align: center;
   }
-  .mostpopular-line {
-    width: 80px;
-    height: 4px;
-    background-color: #f0c244;
-    margin-left: 1em;
-  }
+  // .mostpopular-line {
+  //   width: 60px;
+  //   height: 4px;
+  //   background-color: #f0c244;
+  //   margin: 0 auto;
+  // }
   .most-popular-container {
     width: 100%;
     transition: max-height 0.5s ease;
@@ -246,15 +278,14 @@
     font-weight: 900;
     margin-left: 2em;
     margin-top: 2em;
+    text-align: center;
   }
-  .mostpopular-line {
-    width: 120px;
-    margin-bottom: 50px;
-
-    height: 4px;
-    background-color: #f0c244;
-    margin-left: 5em;
-  }
+  // .mostpopular-line {
+  //   width: 140px;
+  //   height: 4px;
+  //   background-color: #f0c244;
+  //   margin: 0 auto;
+  // }
   .most-popular-container {
     margin-top: 2em;
     padding: 0 130px;
@@ -305,6 +336,7 @@
               margin: 1em 10px;
               height: 3px;
               z-index: 3000;
+              border-radius: 30px;
 
               background-color: #f0c244;
             }
@@ -348,6 +380,13 @@
 }
 
 @media screen and (min-width: 1444px) {
+  .most-popular-title {
+    font-size: 3.2em;
+    font-weight: 900;
+    margin-left: 2em;
+    margin-top: 2em;
+    text-align: center;
+  }
   .most-popular-container {
     margin-top: 2em;
     padding: 0 130px;
@@ -396,6 +435,9 @@
 }
 
 @media screen and (min-width: 1800px) {
+  .button-nav {
+    margin: 70px auto 60px auto;
+  }
   .most-popular-container {
     margin-top: 2em;
     padding: 0 150px;

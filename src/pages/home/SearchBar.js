@@ -10,7 +10,7 @@ function SearchBar() {
         <div className="overlay-right"></div>
         <div className="bg-img">
           <div className="search-content-container">
-            <div className="title title-1">Explore Anime and manga</div>
+            <div className="title title-1">Explore Anime and Manga</div>
             <div className="title title-2">
               Stay up-to-date with the latest releases,
             </div>

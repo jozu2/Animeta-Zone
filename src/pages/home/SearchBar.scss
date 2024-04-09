@@ -10,6 +10,8 @@
   .season-line {
     width: 80px;
     height: 4px;
+    border-radius: 30px;
+
     background-color: #f0c244;
     margin-left: 1em;
   }
@@ -34,11 +36,11 @@
       max-width: 1920px;
     }
     .overlay-bottom {
-      opacity: 0.9;
+      opacity: 0.8;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, #000000 95%);
     }
     .overlay-top {
-      opacity: 0.8;
+      opacity: 0.3;
       background: linear-gradient(360deg, rgba(0, 0, 0, 0) 30%, #000000 95%);
     }
     .overlay-left {
@@ -134,11 +136,11 @@
       height: 720px;
     }
     .overlay-bottom {
-      opacity: 0.9;
+      opacity: 0.8;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #000000 95%);
     }
     .overlay-top {
-      opacity: 0.8;
+      opacity: 0.3;
       background: linear-gradient(360deg, rgba(0, 0, 0, 0) 30%, #000000 95%);
     }
     .overlay-left {
